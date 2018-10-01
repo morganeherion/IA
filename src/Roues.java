@@ -51,8 +51,9 @@ public class Roues {
 		roueG.forward();
 		roueD.forward();
 		
-//		arret
-//		stop();
+		Delay.msDelay(duree);
+		
+		stop();
 	}
 	
 	public void recule(int puissance, int duree) {
@@ -62,6 +63,10 @@ public class Roues {
 		
 		roueG.backward();
 		roueD.backward();
+		
+		Delay.msDelay(duree);
+		
+		stop();
 	}		
 	
 	//peut-etre juste faire genre une méthode qui fait tourner
@@ -88,7 +93,7 @@ public class Roues {
 		
 		roueG.forward();
 		roueD.forward();
-		//à changer
+		//à changer (valeurs "trouvées" à tâtons)
 		Delay.msDelay(5000);
 		stop();
 		
@@ -101,13 +106,12 @@ public class Roues {
 		
 		roueG.forward();
 		roueD.backward();
-		//à changer
+		//à changer (valeurs "trouvées" à tâtons)
 		Delay.msDelay(510);
 		stop();
 	}
 	
-//	public void pivot / demiTour
-	
+	//arret des moteurs et liberation des ressources
 	public void stop() {
 		roueG.stop();
 		roueD.stop();

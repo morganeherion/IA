@@ -29,7 +29,8 @@ public class Pinces {
 	}
 	
 	
-	//genre faut calculer le nombre de tours du moteur pour ouvrir/fermer
+	//genre va falloir calculer le nombre de tours du moteur pour ouvrir/fermer
+	//faut aussi voir pour ouvrir un minimum
 	public void ouvrir(int puissance, int delay, int duree) {
 		//ptetre vérifier pour valeur négatives
 		if (delay != 0) {
@@ -39,7 +40,7 @@ public class Pinces {
 		pinces.forward();
 		Delay.msDelay(duree);
 		pinces.stop();
-		pinces.close();
+//		pinces.close();
 		setFerme(false);
 	}
 	
@@ -51,8 +52,16 @@ public class Pinces {
 		pinces.backward();
 		Delay.msDelay(duree);
 		pinces.stop();
-		pinces.close();
+//		pinces.close();
 		setFerme(true);		
+	}
+	
+	public void capturerPalet() {
+		fermer(40, 0, 1000);
+	}
+	
+	public void close() {
+		pinces.close();
 	}
 	
 //	public void stop() {

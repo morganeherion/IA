@@ -112,7 +112,12 @@ public class RobotIA {
 //        Button.LEDPattern(4);
 //        Button.waitForAnyPress();
 		Roues r = new Roues();
-		r.demiTour();
+		Pinces p = new Pinces();
+		r.recule(60, 5000);
+//		p.ouvrir(40, 0, 1500);
+//		Delay.msDelay(2000);
+//		p.fermer(40, 0, 1000);
+//		p.close();
     }
                 
 
