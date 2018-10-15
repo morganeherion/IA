@@ -111,13 +111,16 @@ public class RobotIA {
 //
 //        Button.LEDPattern(4);
 //        Button.waitForAnyPress();
-		Roues r = new Roues();
-		Pinces p = new Pinces();
-		r.recule(60, 5000);
+//		Roues r = new Roues();
+//		Pinces p = new Pinces();
+//		r.recule(60, 5000);
 //		p.ouvrir(40, 0, 1500);
 //		Delay.msDelay(2000);
 //		p.fermer(40, 0, 1000);
 //		p.close();
+		
+		CapteurLumiere cl = new CapteurLumiere();
+		cl.readLines();
     }
                 
 
