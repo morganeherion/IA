@@ -1,24 +1,22 @@
-import lejos.hardware.port.Port;
+import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
 
 public class CapteurToucher extends EV3TouchSensor{
-	
-	private boolean touche;
-	
+		
 	public CapteurToucher() {
-		super(SensorPort.S2);
+		super(LocalEV3.get().getPort("S4"));
 	}
 	
 	public boolean isTouche() {
         float[] sample = new float[1];
-        fetchSample(sample, 0);
         
-        setTouche(sample[0] != 0);
-        return sample[0] != 0;
+        fetchSample(sample, 0);
+        if(sample[0]==0) {
+        	return false;
+        } else {
+        	return true;
+        }
 	}
-	
-	private void setTouche(boolean touche) {
-		this.touche = touche;
-	}
+
 }
