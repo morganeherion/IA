@@ -1,3 +1,4 @@
+import lejos.utility.Delay;
 
 public class Obstacle {
 	
@@ -16,21 +17,24 @@ public class Obstacle {
 		d = distanceInitiale;
 		distance.enable();
 		while(d<=distanceInitiale) {
-			r.avance(40,300);
+			r.avance(40);
 			d = distance.getDistance();
 		}
 		
 		r.quartTourDroite();
+		Delay.msDelay(500);
 		if(distance.getDistance()<distanceInitiale) {
 			this.isAttrape(toucher, r, p);
 		}
 		else  {
 			r.demiTourGauche();
+			Delay.msDelay(500);
 			if(distance.getDistance()<distanceInitiale) {
 				this.isAttrape(toucher, r, p);	
 			}
 			else {
 				r.quartTourDroite();
+				Delay.msDelay(500);
 				this.isAttrape(toucher, r, p);
 			}
 		}
@@ -39,10 +43,14 @@ public class Obstacle {
 		
 	public void isAttrape(CapteurToucher toucher, Roues r, Pinces p) {
 		while (!toucher.isTouche()) {
-			r.avance(40, 2000);
+			r.avance(60, 500);
 		}
 		p.capturerPalet();
 		r.stop(); 
+		
+	}
+	
+	public void depart(Roues r, Pinces p) {
 		
 	}
 	

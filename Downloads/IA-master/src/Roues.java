@@ -46,7 +46,7 @@ public class Roues {
 	public void avance(int puissance) {
 		//tant qu'on dit d'avancer
 		roueG.setPower(puissance);
-		roueD.setPower(puissance);
+		roueD.setPower(puissance+1);
 		
 		roueG.forward();
 		roueD.forward();
@@ -55,7 +55,7 @@ public class Roues {
 	public void avance(int puissance, int duree) {
 		//tant qu'on dit d'avancer
 		roueG.setPower(puissance);
-		roueD.setPower(puissance);
+		roueD.setPower(puissance+1);
 		
 		roueG.forward();
 		roueD.forward();
@@ -121,7 +121,7 @@ public class Roues {
 		roueG.forward();
 		roueD.backward();
 		
-		Delay.msDelay(600);
+		Delay.msDelay(500);
 		stop();
 	}
 	
@@ -132,7 +132,18 @@ public class Roues {
 		roueD.forward();
 		roueG.backward();
 		
-		Delay.msDelay(300);
+		Delay.msDelay(250);
+		stop();
+	}
+	
+	public void quartTourGauche() {
+		roueG.setPower(30);
+		roueD.setPower(30);
+		
+		roueD.backward();
+		roueG.forward();
+		
+		Delay.msDelay(250);
 		stop();
 	}
 	

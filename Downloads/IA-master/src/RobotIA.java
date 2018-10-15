@@ -115,43 +115,15 @@ public class RobotIA {
 		Obstacle o = new Obstacle();
 		Roues r = new Roues();
 		CapteurToucher toucher = new CapteurToucher();
-		p.ouvertureInitiale();
-		Delay.msDelay(1000);
-		p.capturerPalet();
-		Delay.msDelay(1000);
+		
+		//p.relachePalet();
 		p.relachePalet();
-		Delay.msDelay(1000);
-		p.fermetureInitiale();
-//
-//        Button.LEDPattern(4);
-//        Button.waitForAnyPress();
-/*		Obstacle  obstacle = new Obstacle();
-		Pinces p = new Pinces();
-		CapteurToucher touche = new CapteurToucher();
-		//p.ouvrir(80,0,1200);
-		
-		obstacle.isPresent(c.getDistance());
-		obstacle.isAttrape();
+		//r.avance(100, 1500); 
+		//r.quartTourDroite();
+		//r.avance(100, 1200);
+		//r.quartTourGauche();
+		//r.avance(100, 4000);
 
-		}
-		
-		c.disable();*/
-		//p.capturerPalet();
-		/*p.ouvertureInitiale();
-		System.out.println(distance.getDistance());
-		Delay.msDelay(2000);
-		o.isPresent(distance.getDistance(), distance, toucher, r, p);
-		System.out.println("OK");
-		Delay.msDelay(2000);*/
-//		r.avance(60);
-		//p.ouvrir(80, 0, 1200);
-		//p.ouvertureInitiale();
-		//p.capturerPalet();
-
-//		p.ouvrir(30, 0, 1500);
-//		Delay.msDelay(2000);
-//		p.fermer(40, 0, 1000);
-//		p.close();
     }
                 
 
