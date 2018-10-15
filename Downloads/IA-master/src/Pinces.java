@@ -57,15 +57,19 @@ public class Pinces {
 	}
 	
 	public void capturerPalet() {
-		fermer(80, 0, 1000);
+		fermer(80, 0, 700);
+	}
+	
+	public void relachePalet() {
+		ouvrir(80, 0, 700);
 	}
 	
 	public void ouvertureInitiale() {
-		ouvrir(80,0,1400);
+		ouvrir(80,0,1000);
 	}
 	
 	public void fermetureInitiale() {
-		fermer(80,0,1400);
+		fermer(80,0,1000);
 	}
 	
 	public void close() {

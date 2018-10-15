@@ -16,7 +16,7 @@ public class Obstacle {
 		d = distanceInitiale;
 		distance.enable();
 		while(d<=distanceInitiale) {
-			r.avance(40,2000);
+			r.avance(40,300);
 			d = distance.getDistance();
 		}
 		

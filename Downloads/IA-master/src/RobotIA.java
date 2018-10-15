@@ -115,7 +115,13 @@ public class RobotIA {
 		Obstacle o = new Obstacle();
 		Roues r = new Roues();
 		CapteurToucher toucher = new CapteurToucher();
-		
+		p.ouvertureInitiale();
+		Delay.msDelay(1000);
+		p.capturerPalet();
+		Delay.msDelay(1000);
+		p.relachePalet();
+		Delay.msDelay(1000);
+		p.fermetureInitiale();
 //
 //        Button.LEDPattern(4);
 //        Button.waitForAnyPress();
@@ -130,13 +136,13 @@ public class RobotIA {
 		}
 		
 		c.disable();*/
-		//p.ouvertureInitiale();
+		//p.capturerPalet();
+		/*p.ouvertureInitiale();
 		System.out.println(distance.getDistance());
 		Delay.msDelay(2000);
 		o.isPresent(distance.getDistance(), distance, toucher, r, p);
-		System.out.println(" CA C'EST OK");
-		System.out.println("YOUHOU !!!!!");
-		Delay.msDelay(2000);
+		System.out.println("OK");
+		Delay.msDelay(2000);*/
 //		r.avance(60);
 		//p.ouvrir(80, 0, 1200);
 		//p.ouvertureInitiale();
