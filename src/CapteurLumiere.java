@@ -79,7 +79,8 @@ public class CapteurLumiere {
 	
 	//à voir pour le paramètre de retour
 	//ça devrait se changer tranquille
-	public void determinerCouleur() {
+	public String determinerCouleur() {
+		String color = "";
 		try {
 			boolean continuer = true;
 			
@@ -96,7 +97,7 @@ public class CapteurLumiere {
 				float[] sample = new float[average.sampleSize()];
 				average.fetchSample(sample, 0);
 				double minscal = Double.MAX_VALUE;
-				String color = "";
+				//String color = "";
 				
 				double scalaire = scalaire(sample, blue);				
 				
@@ -141,18 +142,19 @@ public class CapteurLumiere {
 					color = "black";
 				}
 				
-				System.out.println(color);
-				Button.waitForAnyPress();
+				//System.out.println(color);				
+				/*Button.waitForAnyPress();
 				if(Button.ESCAPE.isDown()) {
 					colorSensor.setFloodlight(false);
 					continuer = false;
-				}		
+				}*/		
 			}
 		} catch (Throwable t) {
 			t.printStackTrace();
 			Delay.msDelay(10000);
 			System.exit(0);
 		}
+		return color;
 	}
 	
 	public static double scalaire(float[] v1, float[] v2) {
